@@ -9,6 +9,53 @@
  html{
     scroll-behavior: smooth;
  }
+
+ .animacion{
+ font-family: "Work Sans", sans-serif;
+ letter-spacing: 2vmin;
+ background: black;
+ display: flex;  
+ align-items: center;
+ justify-content: center;
+}
+
+h5 {
+ font-size: 10vmin;
+ position: absolute;
+}
+
+.border {
+ color: black;  
+ text-shadow:
+   -1px -1px 0 white, 
+   1px -1px 0 white,
+   -1px 1px 0 white,
+   1px 1px 0 white;  
+}
+
+.wave {
+ color: #1c90b6;
+ animation: wave 3s ease-in-out infinite;
+}
+
+.two {
+ transform: translateY(0.8em);
+}
+
+.three {
+ transform: translateY(-0.8em);
+}
+
+@keyframes wave {
+ 0%, 100% {
+   clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+ }
+
+ 50% {
+   clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+ }
+}
+  
  .contenedor-header{
     background: #1e2326;
     position: fixed;
@@ -22,9 +69,9 @@
     max-width: 100%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 15px 20px;
+    padding: 5px 5px;
  
  }
  
@@ -43,10 +90,10 @@
     text-decoration: none;
  }
  .contenedor-header header nav ul li a:hover{
-    color:#1CB698;
+    color:#1c90b6;
  }
  .nav-responsive{
-    background-color:#1CB698;
+    background-color:#1c90b6;
     color:#fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -70,9 +117,17 @@
     transition: .3s;
     padding: 10px 20px;
  }
- 
+ .logo{
+   display:flex;
+   justify-content: flex-start;
+    width: 300px;
+    height: 100px;
+   
+
+
+ }
   .main .info-content .redes a:hover{
-    background-color: #1CB698;
+    background-color: #1c90b6;
  }
  
  /* PANTALLA INICIO */
@@ -88,23 +143,42 @@
  }
  
  
- .main {
+ .main1 {
     margin: 0 auto;
     width: 80vw;
     height: 80vh;
     display: grid;
+    grid-template-columns: repeat(2,0fr);
+    align-items: center;
+    justify-content:space-around;
+   
+
+
+ 
+  }
+  .main{
+   
+    width: 80vw;
+    height: 80vh;
+    display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    gap: 2em;
+    justify-content:space-around;
+   
+
+  }
+
+  .main .info-content{
+    margin-top: 250px;
   }
   
   h1 {
     font-size: 6em;
   }
-  h2{font-size: 5em;}
+  h2{font-size: 3.2em;}
   
   .info-content span {
-    color: aqua;
+    color: #1c90b6;
   }
 
   h3 {
@@ -114,20 +188,38 @@
   
   .download-cv {
     padding: 10px 20px;
-    background-color: aqua;
+    background-color: #1c90b6;
     border: none;
     border-radius: 20px;
     margin-top: 10px;
     cursor: pointer;
-    -webkit-box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
-    -moz-box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
-    box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+    -webkit-box-shadow: 1px 3px 11px -5px rgba(102, 201, 231, 0.69);
+    -moz-box-shadow: 1px 3px 11px -5px rgba(102,201,231,0.69);
+    box-shadow: 1px 3px 11px -5px rgba(102,201,231,0.69);
   }
   
   .download-cv:hover {
     background-color: azure;
     box-shadow: none;
   }
+
+
+
+  .sobremi .abajo{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1c90b6;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px ;
+}
+
   
   .sobremi .contenido-seccion .fila .img{
     background: url(img/4.png);
@@ -172,7 +264,7 @@
 }
 
 .sobremi .contenido-seccion p span{
-    color: #1CB698;
+    color: #1c90b6;
     font-weight: bold;
 }
 
@@ -201,12 +293,12 @@
 
  .col ul li strong{
     display: inline-block;
-    color: #1CB698;
+    color: #1c90b6;
     width: 130px;
 }
 
  .col ul li span{
-    background-color: #1CB698;
+    background-color: #1c90b6;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -231,7 +323,7 @@
 }
 
 .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
+    background-color: #1c90b6;
 }
 
  .col .contenedor-intereses .interes i{
@@ -264,7 +356,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     z-index: -1;
     transition: 1s;
 }
@@ -325,7 +417,7 @@
 }
 
 .skills .skill .progreso{
-    background-color: #1CB698;
+    background-color: #1c90b6;
     position: absolute;
     top: 0;
     left: 0;
@@ -337,7 +429,7 @@
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     border-radius: 50px;
     line-height: 40px;
     text-align: 40px;
@@ -576,14 +668,14 @@
 }
 
 .curriculum .fila .item .casa{
-    color: #1CB698;
+    color: #1c90b6;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
 .curriculum .fila .item .fecha{
     display: block;
-    color: #1CB698;
+    color: #1c90b6;
     margin-bottom: 10px;
 }
 .curriculum .fila .item p{
@@ -591,7 +683,7 @@
 }
 
 .curriculum .fila .izq{
-    border-right: 2px solid #1CB698;
+    border-right: 2px solid #1c90b6;
     margin-right: 20px;
 }
 .curriculum .fila .der{
@@ -601,7 +693,7 @@
 
 .curriculum .fila .item .conectori{
     height: 2px;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -614,7 +706,7 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     float: right;
     position: relative;
     bottom: 4px;
@@ -622,7 +714,7 @@
 }
 .curriculum .fila .item .conectord{
     height: 2px;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -635,7 +727,7 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     float: left;
     position: relative;
     bottom: 4px;
@@ -646,7 +738,8 @@
     max-width: 100%;
     padding: 50px 200px;
     margin: auto;
-    background-color: #424a51;
+    background-color:#252A2E;
+    
 }
 
 
@@ -707,25 +800,7 @@
     bottom: 0;
 }
 
-.portfolio .fila .proyecto .info button{
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-    padding: 2px 2px;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: .5s;
-    cursor: pointer;
-    background-color: #08080738;
-    width: 100px;
-}
 
-.portfolio .fila .proyecto .info a button:hover{
-    background-color: #1cb69782;
-}
 
 .contacto{
     background: linear-gradient(to top, rgba(55, 63, 69, 0.8), rgba(30,35,38,1)),
@@ -782,7 +857,7 @@
 }
 
 .contacto .btn-enviar:hover {
-    background-color: #1cb69782;
+    background-color: #1c90b6;
     color: #fff;
 }
 
@@ -808,7 +883,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     z-index: -1;
     transition: 1s;
 
@@ -842,7 +917,7 @@
 }
 
 .contacto .col .info ul li i{
-    color: #1CB698;
+    color: #1c90b6;
     display: inline-block;
     margin-right: 20px;
 }
@@ -879,7 +954,7 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
+    background-color: #1c90b6;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -889,6 +964,8 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px ;
 }
+
+
 
 
 
@@ -918,6 +995,15 @@ footer .arriba{
     nav.responsive ul li{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
+    }
+
+    .inicio .main{
+        display:flex;
+        justify-content: center;
+    }
+
+    .animacion{
+        display: none;
     }
   
 }
@@ -983,12 +1069,26 @@ footer .arriba{
         
        display:none;  
     }
+
+    .animacion{
+        display: none;
+    }
+
+    .inicio .main{
+      margin-left: 35px;
+    }
+.skills .contenido-seccion h2{
+    font-size: 40px;
+}
+  
 }
 
 #pie {
     font-size: 25px;
     color:#a8f3e4;
     font-style: unset;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
